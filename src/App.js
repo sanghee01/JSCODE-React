@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./Style.css";
+import InputGroup from "./InputGroup";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <form action="#">
+      <h1>회원가입</h1>
+      <InputGroup
+        name="이메일"
+        type="email"
+        text="이메일을 입력하세요"
+        label="email"
+        isRequired="true"
+      />
+      <InputGroup
+        name="비밀번호"
+        type="password"
+        text="비밀번호을 입력하세요"
+        label="password"
+        isRequired="true"
+      />
+      <InputGroup
+        name="비밀번호 재확인"
+        type="password"
+        text="비밀번호을 입력하세요"
+        label="re-password"
+        isRequired="true"
+      />
+      <InputGroup
+        name="이름"
+        type="text"
+        text="이름을 입력하세요"
+        label="name"
+        isRequired="true"
+      />
+      <InputGroup
+        name="나이"
+        type="number"
+        text="나이를 입력하세요"
+        label="age"
+        isRequired={null}
+      />
+      <button>가입하기</button>
+    </form>
   );
-}
+};
 
 export default App;

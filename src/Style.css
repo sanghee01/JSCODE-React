@@ -1,0 +1,50 @@
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  margin: 10px auto;
+}
+
+input {
+  padding: 14px 25px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.title {
+  margin-top: 15px;
+}
+
+.essential {
+  margin-left: 5px;
+  font-size: 13px;
+}
+.aster {
+  color: red;
+}
+
+button {
+  margin-top: 40px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background-color: #1889e6;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
