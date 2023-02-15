@@ -31,19 +31,14 @@ const InputGroup = (props) => {
       <Title>
         <label for={label}>{name}</label>
         <Essential>
-          {isRequired ? (
+          {isRequired && (
             <sup>
               필수 <Aster>*</Aster>
             </sup>
-          ) : null}
+          )}
         </Essential>
       </Title>
-      <Input
-        type={type}
-        id={label}
-        placeholder={text}
-        required={isRequired ? "required" : null}
-      />
+      <Input type={type} id={label} placeholder={text} required={isRequired} />
     </>
   );
 };

@@ -33,35 +33,34 @@ const App = () => {
           type="email"
           text="이메일을 입력하세요"
           label="email"
-          isRequired="true"
+          isRequired
         />
         <InputGroup
           name="비밀번호"
           type="password"
           text="비밀번호을 입력하세요"
           label="password"
-          isRequired="true"
+          isRequired
         />
         <InputGroup
           name="비밀번호 재확인"
           type="password"
           text="비밀번호을 입력하세요"
           label="re-password"
-          isRequired="true"
+          isRequired
         />
         <InputGroup
           name="이름"
           type="text"
           text="이름을 입력하세요"
           label="name"
-          isRequired="true"
+          isRequired
         />
         <InputGroup
           name="나이"
           type="number"
           text="나이를 입력하세요"
           label="age"
-          isRequired={null}
         />
         <Button>가입하기</Button>
       </Form>
