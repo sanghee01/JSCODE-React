@@ -24,12 +24,24 @@ const Input = styled.input`
   }
 `;
 
-const InputGroup = (props) => {
-  const { label, name, type, text, isRequired } = props;
+const PasswordNotMatchMsg = styled.p`
+  font-size: 10px;
+  color: red;
+`;
+
+const InputGroup = ({
+  title,
+  label,
+  type,
+  placeholder,
+  isRequired,
+  onChange,
+  message,
+}) => {
   return (
     <>
       <Title>
-        <label for={label}>{name}</label>
+        <label htmlFor={label}>{title}</label>
         <Essential>
           {isRequired && (
             <sup>
@@ -38,9 +50,15 @@ const InputGroup = (props) => {
           )}
         </Essential>
       </Title>
-      <Input type={type} id={label} placeholder={text} required={isRequired} />
+      <Input
+        type={type}
+        id={label}
+        placeholder={placeholder}
+        required={isRequired}
+        onChange={onChange}
+      />
+      {message && <PasswordNotMatchMsg>{message}</PasswordNotMatchMsg>}
     </>
   );
 };
-
 export default InputGroup;

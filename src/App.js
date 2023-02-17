@@ -1,7 +1,13 @@
 import SignForm from "./SignForm";
+import GlobalStyle from "./GlobalStyles";
 
 const App = () => {
-  return <SignForm />;
+  return (
+    <>
+      <GlobalStyle />
+      <SignForm />
+    </>
+  );
 };
 
 export default App;
