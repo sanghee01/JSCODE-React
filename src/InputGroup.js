@@ -31,7 +31,7 @@ const PasswordNotMatchMsg = styled.p`
 
 const InputGroup = ({
   title,
-  label,
+  name,
   type,
   placeholder,
   isRequired,
@@ -41,7 +41,7 @@ const InputGroup = ({
   return (
     <>
       <Title>
-        <label htmlFor={label}>{title}</label>
+        <label htmlFor={name}>{title}</label>
         <Essential>
           {isRequired && (
             <sup>
@@ -52,7 +52,8 @@ const InputGroup = ({
       </Title>
       <Input
         type={type}
-        id={label}
+        name={name}
+        id={name}
         placeholder={placeholder}
         required={isRequired}
         onChange={onChange}
