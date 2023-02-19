@@ -1,5 +1,5 @@
-import SignForm from "./SignForm";
-import GlobalStyle from "./GlobalStyles";
+import SignForm from "./pages/SignForm";
+import GlobalStyle from "./styles/GlobalStyles";
 
 const App = () => {
   return (

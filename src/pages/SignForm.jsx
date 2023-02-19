@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import InputGroup from "./InputGroup";
+import InputGroup from "../components/InputGroup";
 import styled from "styled-components";
 
 const Form = styled.form`
