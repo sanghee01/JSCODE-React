@@ -1,38 +1,6 @@
 import { useState, useEffect } from "react";
 import InputGroup from "../components/InputGroup";
-import styled from "styled-components";
-
-const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Header = styled.h1`
-  margin: 10px auto;
-`;
-
-const SubmitButton = styled.button`
-  cursor: ${({ isActive }) => (isActive ? "pointer" : "not-allowed")};
-  margin-top: 40px;
-  padding: 14px;
-  border-radius: 30px;
-  border: none;
-  background-color: ${({ isActive }) => (isActive ? "#1889e6" : "lightgray")};
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-`;
-const ResetButton = styled.button`
-  cursor: pointer;
-  margin-top: 10px;
-  padding: 14px;
-  border-radius: 30px;
-  border: none;
-  background-color: gray;
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-`;
+import * as style from "../styles/SignFormStyle";
 
 const SignForm = () => {
   const [input, setInput] = useState({
@@ -100,8 +68,8 @@ const SignForm = () => {
 
   return (
     <>
-      <Form onSubmit={onSubmit}>
-        <Header>회원가입</Header>
+      <style.Form onSubmit={onSubmit}>
+        <style.Header>회원가입</style.Header>
         <InputGroup
           title="이메일"
           type="email"
@@ -142,11 +110,13 @@ const SignForm = () => {
           name="age"
           onChange={onChangeInput}
         />
-        <SubmitButton isActive={isAllCorrect}>가입하기</SubmitButton>
-        <ResetButton type="reset" onClick={onClickResetButton}>
+        <style.SubmitButton isActive={isAllCorrect}>
+          가입하기
+        </style.SubmitButton>
+        <style.ResetButton type="reset" onClick={onClickResetButton}>
           초기화
-        </ResetButton>
-      </Form>
+        </style.ResetButton>
+      </style.Form>
     </>
   );
 };
