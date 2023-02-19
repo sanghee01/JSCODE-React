@@ -11,7 +11,7 @@ const SignForm = () => {
     age: "",
   });
   const [isPasswordMatch, setIsPasswordMatch] = useState("");
-  const [isAllCorrect, setIsAllCorrect] = useState(false);
+  const [isNotCorrect, setIsNotCorrect] = useState(true);
 
   useEffect(() => {
     if (input.repassword && input.password !== input.repassword) {
@@ -23,15 +23,15 @@ const SignForm = () => {
 
   useEffect(() => {
     if (
-      isPasswordMatch ||
-      !input.email ||
-      !input.password ||
-      !input.repassword ||
-      !input.username
+      !isPasswordMatch &&
+      input.email &&
+      input.password &&
+      input.repassword &&
+      input.username
     ) {
-      setIsAllCorrect(false);
+      setIsNotCorrect(false);
     } else {
-      setIsAllCorrect(true);
+      setIsNotCorrect(true);
     }
   }, [
     isPasswordMatch,
@@ -110,7 +110,7 @@ const SignForm = () => {
           name="age"
           onChange={onChangeInput}
         />
-        <style.SubmitButton isActive={isAllCorrect}>
+        <style.SubmitButton disabled={isNotCorrect}>
           가입하기
         </style.SubmitButton>
         <style.ResetButton type="reset" onClick={onClickResetButton}>

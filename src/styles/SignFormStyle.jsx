@@ -10,15 +10,18 @@ export const Header = styled.h1`
 `;
 
 export const SubmitButton = styled.button`
-  cursor: ${({ isActive }) => (isActive ? "pointer" : "not-allowed")};
+  cursor: pointer;
   margin-top: 40px;
   padding: 14px;
   border-radius: 30px;
   border: none;
-  background-color: ${({ isActive }) => (isActive ? "#1889e6" : "lightgray")};
+  background-color: #1889e6;
   color: white;
   font-size: 15px;
   font-weight: bold;
+  :disabled {
+    background-color: lightgray;
+  }
 `;
 
 export const ResetButton = styled.button`
